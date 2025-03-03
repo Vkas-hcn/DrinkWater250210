@@ -9,8 +9,6 @@ object DrinkConfigData {
     const val startPack1 = "com.blissfuldrinkingwater.goodhealth.dwr.MainActivityFFF"
     const val startPack2 = "com.blissfuldrinkingwater.goodhealth.dwr.MainActivity"
 
-    const val aeskey = "eut65gfvk7wejihr"
-
     const val fffmmm = "vjhitxtx6tcea"
     fun String.containsExactlyThreeA(): Boolean {
         val lowercaseInput = this.lowercase()
@@ -34,7 +32,7 @@ object DrinkConfigData {
                 openid = "D008E22B9B71D8DA117F747CD4C3E1DB",
                 upUrl = "https://lenient.waternotemate.com/poetic/balk",
                 adminUrl = "https://mates.waternotemate.com/api/txtshow/can/",
-                appsflyId = ""
+                appsflyId = "2y6ArFqYyYrX6dXcnD75k4"
             )
         );
     }

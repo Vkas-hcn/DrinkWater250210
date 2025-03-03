@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#E9F2FB"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ui.home.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Hello"
+            android:textColor="#5F6F87"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/app_name"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="284dp"
+            android:layout_height="284dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12.5dp"
+            android:background="@mipmap/home_round_pg">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:max="100"
+                app:indicatorColor="#0084FF"
+                app:indicatorInset="0dp"
+                app:indicatorSize="221dp"
+                app:trackColor="@android:color/transparent"
+                app:trackCornerRadius="4dp"
+                app:trackThickness="8dp"
+                tools:progress="50">
+            </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="96dp"
+                tools:text="64%"
+                android:id="@+id/pgTv"
+                android:textColor="#fff"
+                android:textSize="47sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="158dp"
+                android:text="Today’s goal"
+                android:textColor="#6EB8FF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="176dp"
+                android:drawableEnd="@mipmap/home_edit"
+                android:drawablePadding="4dp"
+                android:text="2000ML"
+                android:id="@+id/target"
+                android:textColor="#CBE6FF"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:background="@drawable/gr_btn"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Add"
+            android:id="@+id/add"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="72dp"
+            android:layout_height="48dp"></androidx.appcompat.widget.AppCompatButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Quick Add"
+            android:textColor="#5F6F87"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="68dp">
+            <TextView
+                android:background="@drawable/cor24"
+                android:backgroundTint="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/cup_of_drink3"
+                android:drawablePadding="8dp"
+                android:text="100ML"
+                android:id="@+id/kp0"
+                android:textColor="#141A1E"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <TextView
+                android:background="@drawable/cor24"
+                android:backgroundTint="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/cup_of_drink3"
+                android:drawablePadding="8dp"
+                android:text="200ML"
+                android:id="@+id/kp1"
+                android:textColor="#141A1E"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <TextView
+                android:background="@drawable/cor24"
+                android:backgroundTint="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/cup_of_drink3"
+                android:drawablePadding="8dp"
+                android:text="250ML"
+                android:id="@+id/kp2"
+                android:textColor="#141A1E"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <TextView
+                android:background="@drawable/cor24"
+                android:backgroundTint="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/cup_of_drink3"
+                android:drawablePadding="8dp"
+                android:text="300ML"
+                android:id="@+id/kp3"
+                android:textColor="#141A1E"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <TextView
+                android:background="@drawable/cor24"
+                android:backgroundTint="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/cup_of_drink3"
+                android:drawablePadding="8dp"
+                android:text="350ML"
+                android:id="@+id/kp4"
+                android:textColor="#141A1E"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+            <TextView
+                android:background="@drawable/cor24"
+                android:backgroundTint="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@mipmap/cup_of_drink3"
+                android:drawablePadding="8dp"
+                android:text="400ML"
+                android:id="@+id/kp5"
+                android:textColor="#141A1E"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Today’s hydration records"
+            android:textColor="#5F6F87"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@mipmap/main_bg"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"></ImageView>
+    <TextView
+        android:drawableTop="@mipmap/main_logo"
+        android:layout_width="match_parent"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="23dp"
+        android:gravity="center_horizontal"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"></TextView>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        app:trackThickness="6dp"
+        app:indicatorColor="@color/white"
+        app:trackCornerRadius="3dp"
+        app:trackColor="#33ffffff"
+        android:indeterminate="true"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content"></com.google.android.material.progressindicator.LinearProgressIndicator>
+    <LinearLayout
+        android:id="@+id/vrinhvsd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+</FrameLayout>

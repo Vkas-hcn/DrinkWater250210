@@ -14,8 +14,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 object TranplusConfig {
-    var adShowTime: Long = 0
-    var showAdTime: Long = 0
+    var adShowTime: Long = 0L
+    var showAdTime: Long = 0L
 
     fun noShowICCC() {
         CoroutineScope(Dispatchers.Main).launch {

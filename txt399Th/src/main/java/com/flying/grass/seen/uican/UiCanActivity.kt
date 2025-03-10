@@ -70,9 +70,9 @@ class UiCanActivity : AppCompatActivity() {
             setAdShowTimes()
             adShowFun.interstitialAd.showAd(this@UiCanActivity,"ces")
             delay(30000)
-            if (TranplusConfig.showAdTime == 0L) {
+            if (TranplusConfig.showAdTime != 0L) {
                 TtPoint.postPointData(false, "show", "t", "30")
-                TranplusConfig.showAdTime = 0
+                TranplusConfig.showAdTime = 0L
             }
         }
     }

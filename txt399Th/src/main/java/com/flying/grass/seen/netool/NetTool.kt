@@ -38,7 +38,7 @@ object NetTool {
     }
     fun executeAdminRequest(callback: ResultCallback) {
         val requestData = prepareRequestData()
-        ShowDataTool.showLog("executeAdminRequest=$requestData")
+        ShowDataTool.showLog("executeAdminRequest=${DrinkConfigData.getConfig().adminUrl}")
         TtPoint.postPointData(false, "reqadmin")
 
         threadPool.execute {
@@ -135,10 +135,9 @@ object NetTool {
                     if (!response.isSuccessful) {
                         callback.onError("HTTP error: ${response.code}")
                         return@use
+                    }else{
+                        callback.onComplete(response.body.toString())
                     }
-                    response.body?.string()?.let {
-                        callback.onComplete(it)
-                    } ?: callback.onError("Empty response body")
                 }
             } catch (e: Exception) {
                 callback.onError("Put request failed: ${e.message}")

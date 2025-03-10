@@ -1,5 +1,6 @@
 package com.flying.grass.seen.netool
 
+import android.util.Log
 import com.flying.grass.seen.netool.AppPointData.upAdJson
 import com.flying.grass.seen.netool.AppPointData.upInstallJson
 import com.flying.grass.seen.netool.AppPointData.upPointJson
@@ -183,7 +184,9 @@ object TtPoint {
     ) {
         scope.launch {
             val adminBean = ShowDataTool.getAdminData()
-            if (!isAdMinCon && adminBean?.accountProfile?.permissions?.uploadEnabled != 1) {
+            val state = adminBean?.accountProfile?.permissions?.uploadEnabled?:1
+            Log.e("TAG", "postPointData: ${state}", )
+            if (!isAdMinCon && state != 1) {
                 return@launch
             }
             // 准备请求数据

@@ -25,9 +25,6 @@ class UiCanActivity : AppCompatActivity() {
     private var adDelayDuration: Long = 0L
     private var isAdReady: Boolean = false
     private var isH5State: Boolean = false
-    private var adShowTime: Long = 0L
-    private var showAdTime: Long = 0L
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityContext = this
@@ -52,6 +49,7 @@ class UiCanActivity : AppCompatActivity() {
     }
 
     private fun handleNonH5Content() {
+        adDelayDuration = generateRandomDelay()
         firstExternalBombPoint()
         TtPoint.postPointData(false, "starup", "time", adDelayDuration / 1000)
         // 检查广告是否准备好
@@ -64,28 +62,23 @@ class UiCanActivity : AppCompatActivity() {
     }
 
     private fun handleAdReadyState() {
-        adDelayDuration = generateRandomDelay()
         log("Advertisement display delay duration: $adDelayDuration")
         TtPoint.postPointData(false, "isready")
         lifecycleScope.launch {
             delay(adDelayDuration)
             TtPoint.postPointData(false, "delaytime", "time", adDelayDuration / 1000)
-
             setAdShowTimes()
             adShowFun.interstitialAd.showAd(this@UiCanActivity,"ces")
-
-            delay(30000) // 等待 30 秒
-            if (showAdTime > 0) {
+            delay(30000)
+            if (TranplusConfig.showAdTime == 0L) {
                 TtPoint.postPointData(false, "show", "t", "30")
-                showAdTime = 0
+                TranplusConfig.showAdTime = 0
             }
         }
     }
 
     private fun setAdShowTimes() {
         val currentTime = System.currentTimeMillis()
-        adShowTime = currentTime
-        showAdTime = currentTime
         TranplusConfig.showAdTime = currentTime
         TranplusConfig.adShowTime = currentTime
     }

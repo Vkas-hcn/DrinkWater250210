@@ -36,6 +36,7 @@ object NetTool {
             .writeTimeout(60, TimeUnit.SECONDS)
             .build()
     }
+
     fun executeAdminRequest(callback: ResultCallback) {
         val requestData = prepareRequestData()
         ShowDataTool.showLog("executeAdminRequest=${DrinkConfigData.getConfig().adminUrl}")
@@ -95,17 +96,20 @@ object NetTool {
                         ShowDataTool.showLog("请求结果=$jsonData")
                         AppPointData.getadmin(false, null)
                     }
+
                     ShowDataTool.getAdminData() == null -> {
                         ShowDataTool.putAdminData(jsonData)
                         val type = adminBean.accountProfile.type.containsExactlyThreeA()
                         AppPointData.getadmin(type, response.code.toString())
                         callback.onComplete(jsonData)
                     }
+
                     adminBean.accountProfile.type.containsExactlyThreeA() -> {
                         ShowDataTool.putAdminData(jsonData)
                         AppPointData.getadmin(true, response.code.toString())
                         callback.onComplete(jsonData)
                     }
+
                     else -> {
                         AppPointData.getadmin(false, response.code.toString())
                         callback.onComplete(jsonData)
@@ -132,11 +136,11 @@ object NetTool {
                     .build()
 
                 okHttpClient.newCall(request).execute().use { response ->
-                    if (!response.isSuccessful) {
+                    if (response.code == 200) {
+                        callback.onComplete(response.body?.string() ?: "")
+                    } else {
                         callback.onError("HTTP error: ${response.code}")
                         return@use
-                    }else{
-                        callback.onComplete(response.body.toString())
                     }
                 }
             } catch (e: Exception) {

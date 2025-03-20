@@ -122,33 +122,25 @@ class TranplusUtils {
         }
         val currentTime = System.currentTimeMillis()
         if (isHaveAdData && ((currentTime - lastAdLoadTime) < AD_CACHE_DURATION)) {
-            // 使用缓存的广告
             ShowDataTool.showLog("不加载,有缓存的广告")
-            // 处理广告展示的逻辑
         } else {
             if (((currentTime - lastAdLoadTime) >= AD_CACHE_DURATION)) {
                 resetAdStatus()
             }
-            // 如果正在加载广告，则不发起新的请求
             if (isLoading) {
                 ShowDataTool.showLog("正在加载广告，等待加载完成")
                 return
             }
-            // 设置正在加载标志
             isLoading = true
-            // 发起新的广告请求
             ShowDataTool.showLog("发起新的广告请求")
             interstitialAd.loadAd()
             TtPoint.postPointData(false, "reqadvertise")
-
-            // 设置超时处理
             Handler(Looper.getMainLooper()).postDelayed({
                 if (isLoading && !isHaveAdData) {
                     ShowDataTool.showLog("广告加载超时，重新请求广告")
-                    // 超时处理，重新请求广告
                     loadAd()
                 }
-            }, 60 * 1000) // 60秒超时
+            }, 60 * 1000)
         }
     }
 

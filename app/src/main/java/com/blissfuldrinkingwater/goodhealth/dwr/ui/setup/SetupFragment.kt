@@ -27,7 +27,7 @@ class SetupFragment : Fragment() {
         val root: View = binding.root
 
         binding.pp.setOnClickListener {
-            val https = "https://www.bing.com"
+            val https = "https://sites.google.com/view/bluewave-hydration/home"
             mContext.startActivity(Intent.parseUri(https,Intent.URI_INTENT_SCHEME))
         }
 

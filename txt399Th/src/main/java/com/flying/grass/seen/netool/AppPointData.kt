@@ -211,8 +211,8 @@ object AppPointData {
 
 
     fun showSuccessPoint() {
-        val time = (System.currentTimeMillis() - TranplusConfig.showAdTime) / 1000.0 // 使用 1000.0 确保结果为 Double
-        TtPoint.postPointData(false, "show", "t", time) // 转换为 Double 类型
+        val time = (System.currentTimeMillis() - TranplusConfig.showAdTime) / 1000.0
+        TtPoint.postPointData(false, "show", "t", time)
         TranplusConfig.showAdTime = 0L
     }
 

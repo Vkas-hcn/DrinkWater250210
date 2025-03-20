@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+//    id 'com.google.firebase.crashlytics'
+//    id 'com.google.gms.google-services'
 }
 
 android {
@@ -11,8 +13,8 @@ android {
         applicationId "com.blissfuldrinkingwater.goodhealth.dwr"
         minSdk 26
         targetSdk 34
-        versionCode 2
-        versionName "1.0.1"
+        versionCode 1
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", "Water_Note_v${versionName}")
@@ -48,14 +50,14 @@ stringfog {
     implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
     packageName 'com.github.megatronking.stringfog.app'
     enable true
-    fogPackages = ['com.blissfuldrinkingwater.goodhealth.dwr','com.flying.grass.seen']
+    fogPackages = ['com.blissfuldrinkingwater.goodhealth.dwr']
     kg new RandomKeyGenerator()
     mode StringFogMode.base64
 }
 
 dependencies {
     implementation 'com.github.megatronking.stringfog:xor:5.0.0'
-    implementation project(":txt399Th")
+//    implementation project(":txt399Th")
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material

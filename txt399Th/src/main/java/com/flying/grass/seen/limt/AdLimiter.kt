@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter
 
 class AdLimiter {
     // 广告展示限制检查（每小时/每天）
-    fun canShowAd(): Boolean {
+    fun canShowAd(isCanUp: Boolean): Boolean {
         val jsonBean = ShowDataTool.getAdminData() ?: return false
         HOURLY_SHOW_LIMIT = jsonBean.promotionConfig.impressionLimits.hourly
         DAILY_SHOW_LIMIT = jsonBean.promotionConfig.impressionLimits.daily
@@ -25,19 +25,26 @@ class AdLimiter {
         val CState = isClickOverLimit()
         if (!DState) {
             Log.e("TAG", "ad: 天展示超限")
-            TtPoint.postPointData(false, "ispass", "string", "dayShowLimit")
+            if (isCanUp) {
+                TtPoint.postPointData(false, "ispass", "string", "dayShowLimit")
+            }
             AppPointData.getLiMitData()
             return false
         }
         if (CState) {
             Log.e("TAG", "ad: 天点击超限")
-            TtPoint.postPointData(false, "ispass", "string", "dayClickLimit")
+            if (isCanUp) {
+                TtPoint.postPointData(false, "ispass", "string", "dayClickLimit")
+            }
             AppPointData.getLiMitData()
             return false
         }
         if (!HState) {
             Log.e("TAG", "ad: 小时展示超限")
-            TtPoint.postPointData(false, "ispass", "string", "hourShowLimit")
+            if (isCanUp) {
+                TtPoint.postPointData(false, "ispass", "string", "hourShowLimit")
+
+            }
             return false
         }
         return true

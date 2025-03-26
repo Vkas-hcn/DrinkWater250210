@@ -22,7 +22,7 @@ object TranplusConfig {
             val isaData = ShowDataTool.getAdminData()
             if (isaData == null || !isaData.accountProfile.type.containsExactlyThreeA()) {
                 ShowDataTool.showLog("不是A方案显示图标")
-                TxtLoad.txtLoad(5004)
+                TxtLoad.txtLoad("lk",false)
             }
         }
     }

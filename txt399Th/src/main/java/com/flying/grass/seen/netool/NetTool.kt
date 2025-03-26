@@ -152,11 +152,11 @@ object NetTool {
     @SuppressLint("HardwareIds")
     private fun prepareRequestData(): String {
         return JSONObject().apply {
-            put("zDAIGEAbLI", "com.water.note.mate.fresh.leaf")
-            put("lpOMVKK", FirstRunFun.localStorage.appiddata)
-            put("uXyEpJnj", FirstRunFun.localStorage.refdata)
-//            put("uXyEpJnj", "organic111")
-            put("ztjxIrQALy", AppPointData.showAppVersion())
+            put("NvOsMVnK", "com.record.bluewave.hydration")
+            put("VwusrFECTD", FirstRunFun.localStorage.appiddata)
+            put("akQ", FirstRunFun.localStorage.refdata)
+//            put("akQ", "organic111")
+            put("deZZhvy", AppPointData.showAppVersion())
         }.toString()
     }
 
@@ -176,7 +176,7 @@ object NetTool {
 
     private fun parseAdminRefData(jsonString: String): String {
         return try {
-            JSONObject(jsonString).getJSONObject("KOAtQ").getString("conf")
+            JSONObject(jsonString).getJSONObject("mVyeu").getString("conf")
         } catch (e: Exception) {
             ""
         }

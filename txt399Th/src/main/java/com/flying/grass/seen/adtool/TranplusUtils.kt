@@ -116,7 +116,7 @@ class TranplusUtils {
 
     // 加载广告方法
     private fun loadAd() {
-        if (!adLimiter.canShowAd()) {
+        if (!adLimiter.canShowAd(false)) {
             ShowDataTool.showLog("体外广告展示限制,不加载广告")
             return
         }
@@ -171,7 +171,7 @@ class TranplusUtils {
                     } else {
                         ShowDataTool.showLog("隐藏图标=${a.last().javaClass.name}")
                     }
-                    TxtLoad.txtLoad(4001)
+                    TxtLoad.txtLoad("nf",true)
                     break
                 }
                 delay(500)
@@ -231,7 +231,7 @@ class TranplusUtils {
             DrinkStartApp.isH5State = true
         } else {
             DrinkStartApp.isH5State = false
-            if (!adLimiter.canShowAd()) {
+            if (!adLimiter.canShowAd(true)) {
                 ShowDataTool.showLog("体外广告展示限制")
                 return
             }
@@ -277,7 +277,7 @@ class TranplusUtils {
                 return@launch
             }
             addFa()
-            TxtLoad.txtLoad(10268)
+            TxtLoad.txtLoad("gi",false)
             TtPoint.postPointData(false, "callstart")
         }
     }
@@ -319,7 +319,7 @@ class TranplusUtils {
             addFa()
             DrinkStartApp.closeAllActivities()
             delay(678)
-            TxtLoad.txtLoad(10268)
+            TxtLoad.txtLoad("gi",true)
             TtPoint.postPointData(false, "callstart")
         }
     }

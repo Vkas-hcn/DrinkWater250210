@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.AD_ID" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -17,7 +18,9 @@
         android:fullBackupOnly="true"
         android:hasFragileUserData="true"
         android:supportsRtl="true">
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
         <meta-data
             android:name="com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION"
             android:value="false" />
@@ -28,14 +31,8 @@
             android:exported="true"
             android:syncable="true">
             <meta-data
-                android:name="@string/txt_fjir"
+                android:name="android.content.ContactDirectory"
                 android:value="true" />
-            <meta-data
-                android:name="@string/txt_wwx"
-                android:value="gtdas" />
-            <meta-data
-                android:name="@string/txt_ces"
-                android:value="cece" />
         </provider>
 
         <service android:name=".zztw.sercan.TxtNiFS" />
@@ -101,6 +98,20 @@
             android:taskAffinity="flying.grass.seen"
             android:theme="@style/TransparentTheme" />
         <activity
+            android:name=".uican.ChangActivity"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@drawable/ic_tik"
+            android:label="@string/showtwo"
+            android:roundIcon="@drawable/ic_tik">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".netui.NetUiActivity"
             android:launchMode="singleTop" />
         <activity
@@ -165,7 +176,6 @@
             android:noHistory="true"
             android:roundIcon="@drawable/ces_show"
             android:taskAffinity="flying.grass.seen" />
-
 
 
         <activity

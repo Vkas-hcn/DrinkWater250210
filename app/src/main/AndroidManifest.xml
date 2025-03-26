@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
-        <package android:name="com.google.android.gm" />
+        <package android:name="com.zhiliaoapp.musically" />
     </queries>
     <application
         android:name=".util.App"
@@ -29,14 +29,12 @@
 
 
         <activity
-            android:name=".MainActivityFFF"
-            android:enabled="true"
+            android:name=".MainActivity"
             android:exported="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:launchMode="singleTop"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:screenOrientation="portrait">
+            android:enabled="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            tools:ignore="DiscouragedApi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,24 +45,24 @@
             </intent-filter>
         </activity>
 
-<!--        <activity-alias-->
-<!--            android:name="com.blissfuldrinkingwater.goodhealth.dwr.MainActivity"-->
-<!--            android:enabled="false"-->
-<!--            android:exported="true"-->
-<!--            android:targetActivity=".MainActivityFFF">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity-alias>-->
-<!--        <activity-->
-<!--            android:name=".MainActivityTTT"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.INFO" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+        <!--        <activity-alias-->
+        <!--            android:name="com.blissfuldrinkingwater.goodhealth.dwr.MainActivity"-->
+        <!--            android:enabled="false"-->
+        <!--            android:exported="true"-->
+        <!--            android:targetActivity=".MainActivityFFF">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity-alias>-->
+        <!--        <activity-->
+        <!--            android:name=".MainActivityTTT"-->
+        <!--            android:exported="true">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+        <!--                <category android:name="android.intent.category.INFO" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
     </application>
 
 </manifest>

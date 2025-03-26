@@ -51,7 +51,8 @@ data class AppData(
     var hourlyShowCountH5: Int? = null,    // 当前小时展示次数
     var currentHourH5: Int? = null,     // 当前记录的小时
     var dailyShowCountH5: Int? = null,     // 当日总展示次数
-    var lastDateH5: String? = null        // 最后记录日期（yyyyMMdd）
+    var lastDateH5: String? = null,        // 最后记录日期（yyyyMMdd）
+    var isFirstInApp: Boolean = false
 )
 
 @Keep
@@ -207,6 +208,13 @@ class LocalStorage(context: Context) {
         set(value) {
             val currentData = db.appDataDao().getData() ?: AppData()
             db.appDataDao().saveData(currentData.copy(lastDateH5 = value))
+        }
+
+    var isFirstInApp: Boolean
+        get() = db.appDataDao().getData()?.isFirstInApp ?: false
+        set(value) {
+            val currentData = db.appDataDao().getData() ?: AppData()
+            db.appDataDao().saveData(currentData.copy(isFirstInApp = value))
         }
 }
 

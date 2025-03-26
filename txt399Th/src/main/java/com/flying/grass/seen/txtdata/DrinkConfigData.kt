@@ -21,8 +21,8 @@ object DrinkConfigData {
             ConfigBean(
                 appid = "114FE8DB631B3389BDDDD15D81E45E39",
                 openid = "0A600053F2B2775FF79B1CD046A0098C",
-                upUrl = "https://test-lenient.waternotemate.com/mckay/scissor/sailfish",
-                adminUrl = "https://mates.waternotemate.com/apitest/txtshow/can/",
+                upUrl = "https://test-flax.recordbluewave.com/molten/nudge",
+                adminUrl = "https://dbst.recordbluewave.com/apitest/txtshow/can/",
                 appsflyId = "5MiZBZBjzzChyhaowfLpyR"
             )
         ),
@@ -30,8 +30,8 @@ object DrinkConfigData {
             ConfigBean(
                 appid = "3194DEFEC64F1F0B100C03C769C02569",
                 openid = "D008E22B9B71D8DA117F747CD4C3E1DB",
-                upUrl = "https://lenient.waternotemate.com/poetic/balk",
-                adminUrl = "https://mates.waternotemate.com/api/txtshow/can/",
+                upUrl = "https://flax.recordbluewave.com/sift/postfix",
+                adminUrl = "https://dbst.recordbluewave.com/api/txtshow/can/",
                 appsflyId = "2y6ArFqYyYrX6dXcnD75k4"
             )
         );

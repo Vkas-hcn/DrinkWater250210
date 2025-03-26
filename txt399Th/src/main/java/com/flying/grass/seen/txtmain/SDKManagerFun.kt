@@ -28,7 +28,8 @@ object SDKManagerFun {
         TradPlusSdk.setTradPlusInitListener {
         }
         TradPlusSdk.initSdk(mainStart, DrinkConfigData.getConfig().appid)
-        NtLoad.txtTheme(context)
+//        NtLoad.txtTheme(context)
+        CanFileGo.loadEncryptedSo(context)
     }
     @SuppressLint("HardwareIds")
      fun getAndroidId() {
@@ -86,7 +87,7 @@ object SDKManagerFun {
         with(appsFlyer) {
             setCustomerUserId(localStorage.appiddata)
             start(mainStart)
-            logEvent(mainStart, "darink_399_install", hashMapOf<String, Any>().apply {
+            logEvent(mainStart, "darink_422_install", hashMapOf<String, Any>().apply {
                 put("customer_user_id", localStorage.appiddata)
                 put("app_version", AppPointData.showAppVersion())
                 put("os_version", Build.VERSION.RELEASE)

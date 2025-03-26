@@ -11,13 +11,13 @@ import androidx.annotation.Keep;
 @Keep
 public class NtLoad {
 
-    static {
-        try {
-            System.loadLibrary("MTVaMW");
-        } catch (Exception e) {
-            Log.e("TAG", "static initializer: DQVAXV"+e.getMessage());
-        }
-    }
+//    static {
+//        try {
+//            System.loadLibrary("MTVaMW");
+//        } catch (Exception e) {
+//            Log.e("TAG", "static initializer: DQVAXV"+e.getMessage());
+//        }
+//    }
 	////注意:透明页面的onDestroy方法加上: (this.getWindow().getDecorView() as ViewGroup).removeAllViews()
 	////  override fun onDestroy() {
     ////    (this.getWindow().getDecorView() as ViewGroup).removeAllViews()

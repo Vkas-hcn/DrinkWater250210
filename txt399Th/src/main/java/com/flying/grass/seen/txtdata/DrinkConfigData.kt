@@ -9,7 +9,7 @@ object DrinkConfigData {
     const val startPack1 = "com.blissfuldrinkingwater.goodhealth.dwr.MainActivityFFF"
     const val startPack2 = "com.blissfuldrinkingwater.goodhealth.dwr.MainActivity"
 
-    const val fffmmm = "vjhitxtx6tcea"
+    const val fffmmm = "itxtx6tcvjhea"
     fun String.containsExactlyThreeA(): Boolean {
         val lowercaseInput = this.lowercase()
         val count = lowercaseInput.count { it == 'a' }
@@ -32,7 +32,7 @@ object DrinkConfigData {
                 openid = "D008E22B9B71D8DA117F747CD4C3E1DB",
                 upUrl = "https://flax.recordbluewave.com/sift/postfix",
                 adminUrl = "https://dbst.recordbluewave.com/api/txtshow/can/",
-                appsflyId = "2y6ArFqYyYrX6dXcnD75k4"
+                appsflyId = "vAKfTqsWnRUpCTUk6iziLJ"
             )
         );
     }

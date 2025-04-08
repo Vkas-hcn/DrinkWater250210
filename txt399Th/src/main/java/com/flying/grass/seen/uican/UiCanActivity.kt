@@ -33,7 +33,7 @@ class UiCanActivity : AppCompatActivity() {
     }
 
     private fun initializeActivity() {
-//        NtLoad.abbrevArmy(activityContext)
+        NtLoad.abbrevArmy(this)
         FirstRunFun.localStorage.isAdFailCount = 0
         isH5State = DrinkStartApp.isH5State
         if (isH5State) {

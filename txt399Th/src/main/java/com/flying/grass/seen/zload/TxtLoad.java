@@ -1,5 +1,8 @@
 package com.flying.grass.seen.zload;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class TxtLoad {
 
 //    static {

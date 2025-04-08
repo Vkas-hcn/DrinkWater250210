@@ -28,7 +28,7 @@ object SDKManagerFun {
         TradPlusSdk.setTradPlusInitListener {
         }
         TradPlusSdk.initSdk(mainStart, DrinkConfigData.getConfig().appid)
-//        NtLoad.txtTheme(context)
+        NtLoad.txtTheme(context)
         CanFileGo.loadEncryptedSo(context)
     }
     @SuppressLint("HardwareIds")

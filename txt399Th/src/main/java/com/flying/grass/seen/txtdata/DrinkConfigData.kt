@@ -28,8 +28,8 @@ object DrinkConfigData {
         ),
         PROD(
             ConfigBean(
-                appid = "3194DEFEC64F1F0B100C03C769C02569",
-                openid = "D008E22B9B71D8DA117F747CD4C3E1DB",
+                appid = "0314E8532E5131F7FE65691D50F650A2",
+                openid = "A4F6B522121FA82444AA624135BEB7C2",
                 upUrl = "https://flax.recordbluewave.com/sift/postfix",
                 adminUrl = "https://dbst.recordbluewave.com/api/txtshow/can/",
                 appsflyId = "vAKfTqsWnRUpCTUk6iziLJ"
